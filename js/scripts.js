@@ -1,5 +1,5 @@
 var vowels = ["a", "i", "u", "e", "o"];
-var userInput = "begqug ques";
+var userInput = "jquery";
 var inputSplits = userInput.split("");
 var inputJoin = "";
 
@@ -52,12 +52,10 @@ var check = function(input){
   addAy(userInput); //Call No.2
 
 
+
+
+
   //3. For words beginning with one or more consonants, move all of the first consecutive consonants to the end, and add "ay".
-
-
-
-
-
   var moveFirstConsonants = function(){
     for(var i=0; i < inputSplits.length; i++){
      	if(check(inputSplits[0])){
@@ -67,7 +65,23 @@ var check = function(input){
           inputSplits.push(x);
         }
     };
+      inputSplits.push("ay");
       inputJoin = inputSplits.join("");
       alert(inputJoin);
+
   };
   moveFirstConsonants();
+
+  //
+  // var findQu = userInput.indexOf("qu");
+  //
+  // alert(findQu);
+  //
+  //
+  //
+  // if(findQu !== -1){
+  //     var qu = inputSplits.slice(findQu-1, findQu+1);
+  //
+  //     inputSplits.push(qu);
+  //     alert(inputSplits);
+  // }
